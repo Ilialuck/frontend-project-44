@@ -8,3 +8,5 @@ make lint:
 	npx eslint
 even-games:
 	node bin/brain-even.js
+calc-games:
+	node bin/brain-calc.js

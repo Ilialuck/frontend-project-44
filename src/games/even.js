@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum } from './randomNumber.js';
+import { getRandomNum } from '../randomNumber.js';
 
 //greeting
 
