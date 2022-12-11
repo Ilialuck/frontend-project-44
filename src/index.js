@@ -13,6 +13,7 @@ export const gamePlay = (gameRules, task) => {
   // цикл игры
 
   for (let i = 0; i < 3; i += 1) {
+    
     const questionAndAnswer = task();
 
     console.log(`Question: ${questionAndAnswer[0]}`);
