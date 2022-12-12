@@ -22,12 +22,12 @@ export const gamePlay = (gameRules, task) => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     // 
-    const rightAnswer = questionAndAnswer[1];
+    const correctAnswer = questionAndAnswer[1];
 
-    if (userAnswer === rightAnswer) {
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}". \nLet's try again, ${userName}!`);
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${userName}!`);
       return;
     }
   }
