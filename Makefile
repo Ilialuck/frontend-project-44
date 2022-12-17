@@ -12,3 +12,5 @@ calc-games:
 	node bin/brain-calc.js
 gcd-games:
 	node bin/brain-gcd.js
+progression-games:
+	node bin/brain-progression.js
