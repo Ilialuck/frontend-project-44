@@ -23,7 +23,7 @@ export const evenGame = () => {
     console.log('Correct!');
    } else {
     const oppositeAnswer = (userAnswer === 'yes' ? 'no' : 'yes');
-    const errorAnswer = console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${oppositeAnswer}'. \nLet's try again, ${userName}`);
+    const errorAnswer = console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${oppositeAnswer}'. \nLet's try again, ${userName}!`);
     return errorAnswer;
    }
   };
