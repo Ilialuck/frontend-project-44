@@ -8,12 +8,12 @@ const primeOrNotGame = () => {
     // генерация числа
     const number = getRandomNum(100);
     // проверка простое или нет
-    const isPrime = (number) => {
+    const isPrime = (num) => {
       if (number === 1) {
         return false;
       }
-      for (let i = 2; i < number; i += 1) {
-        if (number % i === 0) {
+      for (let i = 2; i < num; i += 1) {
+        if (num % i === 0) {
           return false;
         }
       }
