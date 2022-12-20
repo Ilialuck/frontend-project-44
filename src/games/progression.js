@@ -20,8 +20,8 @@ const progressionGame = () => {
 
     // работа с прогрессией
     const progrArray = creatingProgression();
-    const hiddenIndex = getRandomNum(9);
-    let correctAnswer = progrArray[hiddenIndex];
+    const hiddenIndex = getRandomNum(9); // определяем какой элемент прогрессии будет скрыт
+    let correctAnswer = progrArray[hiddenIndex]; // записываем скрытый элемент в правильный ответ
     progrArray[hiddenIndex] = '..';
     const question = progrArray.join(' ');
     correctAnswer = correctAnswer.toString();
