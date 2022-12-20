@@ -1,7 +1,7 @@
-import { getRandomNum } from '../randomNumber.js';
-import { gamePlay } from '../index.js';
+import getRandomNum from '../randomNumber.js';
+import gamePlay from '../index.js';
 
-export const gcdGame = () => {
+const gcdGame = () => {
   const gameRules = 'Find the greatest common divisor of given numbers.';
 
   const taskOfGCDGame = () => {
@@ -13,7 +13,7 @@ export const gcdGame = () => {
 
     const gcdInit = (num1, num2) => {
       let gcd;
-      while (num1 != num2) {
+      while (num1 !== num2) {
         if (num1 > num2) {
           num1 -= num2;
         } else {
@@ -28,3 +28,4 @@ export const gcdGame = () => {
   };
   gamePlay(gameRules, taskOfGCDGame);
 };
+export default gcdGame;

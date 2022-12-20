@@ -1,7 +1,7 @@
-import { getRandomNum } from '../randomNumber.js';
-import { gamePlay } from '../index.js';
+import getRandomNum from '../randomNumber.js';
+import gamePlay from '../index.js';
 
-export const progressionGame = () => {
+const progressionGame = () => {
   const gameRules = 'What number is missing in the progression?';
 
   const taskOfProgressionGame = () => {
@@ -29,3 +29,4 @@ export const progressionGame = () => {
   };
   gamePlay(gameRules, taskOfProgressionGame);
 };
+export default progressionGame;

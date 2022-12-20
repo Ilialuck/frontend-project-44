@@ -1,7 +1,7 @@
-import { getRandomNum } from '../randomNumber.js';
-import { gamePlay } from '../index.js';
+import getRandomNum from '../randomNumber.js';
+import gamePlay from '../index.js';
 
-export const primeOrNotGame = () => {
+const primeOrNotGame = () => {
   const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const taskOfPrimeorNotGame = () => {
@@ -27,3 +27,4 @@ export const primeOrNotGame = () => {
   };
   gamePlay(gameRules, taskOfPrimeorNotGame);
 };
+export default primeOrNotGame;

@@ -1,8 +1,7 @@
 // общая логика игр
 import readlineSync from 'readline-sync';
-import { getRandomNum } from './randomNumber.js';
 
-export const gamePlay = (gameRules, task) => {
+const gamePlay = (gameRules, task) => {
   // greeting
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?: ');
@@ -33,3 +32,4 @@ export const gamePlay = (gameRules, task) => {
 
   console.log(`Congratulations, ${userName}!`);
 };
+export default gamePlay;

@@ -1,7 +1,7 @@
-import { getRandomNum } from '../randomNumber.js';
-import { gamePlay } from '../index.js';
+import getRandomNum from '../randomNumber.js';
+import gamePlay from '../index.js';
 
-export const calcGame = () => {
+const calcGame = () => {
   // game rules
   const gameRules = 'What is the result of the expression?';
 
@@ -34,3 +34,4 @@ export const calcGame = () => {
   };
   gamePlay(gameRules, taskOfCalcGame);
 };
+export default calcGame;
