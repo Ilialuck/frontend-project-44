@@ -13,15 +13,14 @@ export const gamePlay = (gameRules, task) => {
   // цикл игры
 
   for (let i = 0; i < 3; i += 1) {
-    
     const questionAndAnswer = task();
 
     console.log(`Question: ${questionAndAnswer[0]}`);
 
-    //ответ игрока
+    // ответ игрока
     const userAnswer = readlineSync.question('Your answer: ');
 
-    // 
+    //
     const correctAnswer = questionAndAnswer[1];
 
     if (userAnswer === correctAnswer) {
@@ -34,4 +33,3 @@ export const gamePlay = (gameRules, task) => {
 
   console.log(`Congratulations, ${userName}!`);
 };
-

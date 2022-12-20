@@ -1,30 +1,29 @@
-import { getRandomNum } from "../randomNumber.js";
-import { gamePlay } from "../index.js";
+import { getRandomNum } from '../randomNumber.js';
+import { gamePlay } from '../index.js';
 
 export const primeOrNotGame = () => {
-    const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    const taskOfPrimeorNotGame = () => {
-    //генерация числа   
-        const number = getRandomNum(100);
-    //проверка простое или нет
+  const taskOfPrimeorNotGame = () => {
+    // генерация числа
+    const number = getRandomNum(100);
+    // проверка простое или нет
     const isPrime = (number) => {
-        if (number === 1)  {
+      if (number === 1) {
+        return false;
+      }
+      for (let i = 2; i < number; i += 1) {
+        if (number % i === 0) {
           return false;
-        } else {
-          for(let i = 2; i < number; i += 1)  {
-            if(number % i === 0) {
-              return false;
-            }
-          }
-          return true;  
         }
-      };
+      }
+      return true;
+    };
 
-      const question = `${number}`;
-      const correctAnswer = isPrime(number) ? 'yes' : 'no';
+    const question = `${number}`;
+    const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
-      return [question, correctAnswer];
-    }
+    return [question, correctAnswer];
+  };
   gamePlay(gameRules, taskOfPrimeorNotGame);
 };
