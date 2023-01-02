@@ -7,7 +7,7 @@ const playPrimeGame = () => {
   const givePrimeGameTask = () => {
     const number = getRandomNum();
     const isPrime = (num) => {
-      if (number === 1) {
+      if (number < 2) {
         return false;
       }
       for (let i = 2; i < num; i += 1) {
