@@ -1,7 +1,7 @@
 // общая логика игр
 import readlineSync from 'readline-sync';
 
-const gamePlay = (gameRules, task) => {
+const playGame = (gameRules, task) => {
   // приветствие и запоминание имени игрока
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?: ');
@@ -33,4 +33,4 @@ const gamePlay = (gameRules, task) => {
 
   console.log(`Congratulations, ${userName}!`);
 };
-export default gamePlay;
+export default playGame;

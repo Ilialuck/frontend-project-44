@@ -1,13 +1,11 @@
-import getRandomNum from '../randomNumber.js';
+import getRandomNum from '../supportFunctions.js';
 import gamePlay from '../index.js';
 
-const primeOrNotGame = () => {
+const playPrimeGame = () => {
   const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const taskOfPrimeorNotGame = () => {
-    // генерация числа
-    const number = getRandomNum(100);
-    // проверка простое или нет
+  const givePrimeGameTask = () => {
+    const number = getRandomNum();
     const isPrime = (num) => {
       if (number === 1) {
         return false;
@@ -25,6 +23,6 @@ const primeOrNotGame = () => {
 
     return [question, correctAnswer];
   };
-  gamePlay(gameRules, taskOfPrimeorNotGame);
+  gamePlay(gameRules, givePrimeGameTask);
 };
-export default primeOrNotGame;
+export default playPrimeGame;

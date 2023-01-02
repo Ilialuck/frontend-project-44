@@ -13,7 +13,7 @@
 <li><b>Brain-prime</b> - the player is shown a number and must determine if it is prime or not. </li>
 
 <h2><b>Instructions and requirements</b></h2>
-<p>To start the games you need the console, enter the install command, then start the game by typing its name. A demonstration of how to install and run the games can be seen below</p>
+<p>System requirements: Node.js (version 13 and higher). Clone the repository (https://github.com/Ilialuck/frontend-project-44), install the necessary packages. To start the games you need the console, enter the install command (make install), then start the game by typing its name. A demonstration of how to install and run the games can be seen below</p>
 
 
 <h1 align = center>brain-even</h1>

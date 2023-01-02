@@ -1,15 +1,14 @@
-import getRandomNum from '../randomNumber.js';
-import gamePlay from '../index.js';
+import getRandomNum from '../supportFunctions.js';
+import playGame from '../index.js';
 
-const calcGame = () => {
-  // game rules
+const playCalcGame = () => {
   const gameRules = 'What is the result of the expression?';
 
-  const taskOfCalcGame = () => {
-    const num1 = getRandomNum(10);
-    const num2 = getRandomNum(10);
+  const giveCalcGameTask = () => {
+    const num1 = getRandomNum(1, 10);
+    const num2 = getRandomNum(1, 10);
     const operators = ['+', '-', '*'];
-    const ourOperator = operators[getRandomNum(3)];
+    const ourOperator = operators[getRandomNum(1, 3)];
 
     const question = `${num1} ${ourOperator} ${num2}`;
 
@@ -32,6 +31,6 @@ const calcGame = () => {
 
     return [question, correctAnswer];
   };
-  gamePlay(gameRules, taskOfCalcGame);
+  playGame(gameRules, giveCalcGameTask);
 };
-export default calcGame;
+export default playCalcGame;
