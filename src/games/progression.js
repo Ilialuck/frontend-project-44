@@ -18,7 +18,7 @@ const playProgressionGame = () => {
     };
 
     const progrArray = creatingProgression();
-    const hiddenIndex = getRandomNum(5, 9);
+    const hiddenIndex = getRandomNum(0, 5);
     let correctAnswer = progrArray[hiddenIndex];
     progrArray[hiddenIndex] = '..';
     const question = progrArray.join(' ');

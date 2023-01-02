@@ -8,7 +8,7 @@ const playCalcGame = () => {
     const num1 = getRandomNum(1, 10);
     const num2 = getRandomNum(1, 10);
     const operators = ['+', '-', '*'];
-    const ourOperator = operators[getRandomNum(1, 3)];
+    const ourOperator = operators[getRandomNum(0, 2)];
 
     const question = `${num1} ${ourOperator} ${num2}`;
 
