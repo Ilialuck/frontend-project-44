@@ -1,5 +1,5 @@
-import getRandomNum from '../supportFunctions.js';
-import gamePlay from '../index.js';
+import getRandomNum from '../helpers.js';
+import gameEngine from '../index.js';
 
 const playPrimeGame = () => {
   const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -23,6 +23,6 @@ const playPrimeGame = () => {
 
     return [question, correctAnswer];
   };
-  gamePlay(gameRules, givePrimeGameTask);
+  gameEngine(gameRules, givePrimeGameTask);
 };
 export default playPrimeGame;

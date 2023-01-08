@@ -1,20 +1,20 @@
-import getRandomNum from '../supportFunctions.js';
-import playGame from '../index.js';
+import getRandomNum from '../helpers.js';
+import gameEngine from '../index.js';
 
-const doCalc = (x, operator, y) => {
+const doCalc = (num1, operator, num2) => {
   switch (operator) {
     case '+':
-      return x + y;
+      return num1 + num2;
     case '-':
-      return x - y;
+      return num1 - num2;
     case '*':
-      return x * y;
+      return num1 * num2;
     default:
       throw new Error('Unknown state!');
   }
 };
 const playCalcGame = () => {
-  const gameRules = 'What is the result of the expression?';
+  const gameRules = 'What is the result of the enum1pression?';
   const operators = ['+', '-', '*'];
 
   const giveCalcGameTask = () => {
@@ -25,6 +25,6 @@ const playCalcGame = () => {
     const correctAnswer = doCalc(num1, operator, num2).toString();
     return [question, correctAnswer];
   };
-  playGame(gameRules, giveCalcGameTask);
+  gameEngine(gameRules, giveCalcGameTask);
 };
 export default playCalcGame;

@@ -1,7 +1,7 @@
-import getRandomNum from '../supportFunctions.js';
-import gamePlay from '../index.js';
+import getRandomNum from '../helpers.js';
+import gameEngine from '../index.js';
 
-const creatingProgression = () => {
+const createProgression = () => {
   const startNum = getRandomNum(1, 15);
   const stepNum = getRandomNum(1, 15);
   const progressionLength = getRandomNum(5, 10);
@@ -17,14 +17,14 @@ const playProgressionGame = () => {
   const gameRules = 'What number is missing in the progression?';
 
   const giveProgressionGameTask = () => {
-    const progrArray = creatingProgression();
+    const resultingProgression = createProgression();
     const hiddenIndex = getRandomNum(0, 5);
-    let correctAnswer = progrArray[hiddenIndex];
-    progrArray[hiddenIndex] = '..';
-    const question = progrArray.join(' ');
+    let correctAnswer = resultingProgression[hiddenIndex];
+    resultingProgression[hiddenIndex] = '..';
+    const question = resultingProgression.join(' ');
     correctAnswer = correctAnswer.toString();
     return [question, correctAnswer];
   };
-  gamePlay(gameRules, giveProgressionGameTask);
+  gameEngine(gameRules, giveProgressionGameTask);
 };
 export default playProgressionGame;

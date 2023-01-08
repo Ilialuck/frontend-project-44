@@ -8,13 +8,11 @@ const playGame = (gameRules, task) => {
   console.log(gameRules);
   const roundCount = 3;
   for (let i = 0; i < roundCount; i += 1) {
-    const questionAndAnswer = task();
+    const [question, correctAnswer] = task();
 
-    console.log(`Question: ${questionAndAnswer[0]}`);
+    console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
-
-    const correctAnswer = questionAndAnswer[1];
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');

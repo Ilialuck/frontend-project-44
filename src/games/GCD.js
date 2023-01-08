@@ -1,9 +1,9 @@
-import getRandomNum from '../supportFunctions.js';
-import gamePlay from '../index.js';
+import getRandomNum from '../helpers.js';
+import gameEngine from '../index.js';
 
-const gcdInit = (num1, num2) => {
+const findGCD = (num1, num2) => {
   if (!num2) return num1;
-  return gcdInit(num2, num1 % num2);
+  return findGCD(num2, num1 % num2);
 };
 const playGcdGame = () => {
   const gameRules = 'Find the greatest common divisor of given numbers.';
@@ -12,9 +12,9 @@ const playGcdGame = () => {
     const number1 = getRandomNum();
     const number2 = getRandomNum();
     const question = `${number1} ${number2}`;
-    const correctAnswer = gcdInit(number1, number2).toString();
+    const correctAnswer = findGCD(number1, number2).toString();
     return [question, correctAnswer];
   };
-  gamePlay(gameRules, giveGcdGameTask);
+  gameEngine(gameRules, giveGcdGameTask);
 };
 export default playGcdGame;

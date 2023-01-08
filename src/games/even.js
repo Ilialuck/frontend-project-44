@@ -1,5 +1,5 @@
-import playGame from '../index.js';
-import getRandomNum from '../supportFunctions.js';
+import gameEngine from '../index.js';
+import getRandomNum from '../helpers.js';
 
 const isEven = (num) => num % 2 === 0;
 const playEvenGame = () => {
@@ -11,6 +11,6 @@ const playEvenGame = () => {
     const correctAnswer = (isEven(number) ? 'yes' : 'no');
     return [question, correctAnswer];
   };
-  playGame(gameRules, giveEvenGameTask);
+  gameEngine(gameRules, giveEvenGameTask);
 };
 export default playEvenGame;
