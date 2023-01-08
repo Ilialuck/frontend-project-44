@@ -1,5 +1,5 @@
 import getRandomNum from '../helpers.js';
-import gameEngine from '../index.js';
+import playGame from '../index.js';
 
 const findGCD = (num1, num2) => {
   if (!num2) return num1;
@@ -15,6 +15,6 @@ const playGcdGame = () => {
     const correctAnswer = findGCD(number1, number2).toString();
     return [question, correctAnswer];
   };
-  gameEngine(gameRules, giveGcdGameTask);
+  playGame(gameRules, giveGcdGameTask);
 };
 export default playGcdGame;

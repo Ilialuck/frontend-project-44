@@ -1,5 +1,5 @@
 import getRandomNum from '../helpers.js';
-import gameEngine from '../index.js';
+import playGame from '../index.js';
 
 const doCalc = (num1, operator, num2) => {
   switch (operator) {
@@ -25,6 +25,6 @@ const playCalcGame = () => {
     const correctAnswer = doCalc(num1, operator, num2).toString();
     return [question, correctAnswer];
   };
-  gameEngine(gameRules, giveCalcGameTask);
+  playGame(gameRules, giveCalcGameTask);
 };
 export default playCalcGame;
