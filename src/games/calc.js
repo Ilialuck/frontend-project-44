@@ -14,7 +14,7 @@ const doCalc = (num1, operator, num2) => {
   }
 };
 const playCalcGame = () => {
-  const gameRules = 'What is the result of the enum1pression?';
+  const gameRules = 'What is the result of the expression?';
   const operators = ['+', '-', '*'];
 
   const giveCalcGameTask = () => {
